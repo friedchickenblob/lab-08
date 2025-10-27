@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         cityAdapter = new CustomList(this,cityDataList);
         cityList.setAdapter(cityAdapter);
-
     }
+
+    
 }

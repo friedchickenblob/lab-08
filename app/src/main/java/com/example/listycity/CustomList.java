@@ -69,18 +69,16 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void delete(City city) throws Exception {
-//        if (hasCity(city)) {
-//            for (City c : cities) {
-//                if (c.compareTo(city) == 0) {
-//                    cities.remove(c);
-//                    System.out.println("bruh e");
-//                }
-//            }
-//            // System.out.println("bruh");
-//        } else {
+        if (hasCity(city)) {
+            for (City c : cities) {
+                if (c.compareTo(city) == 0) {
+                    cities.remove(c);
+                    System.out.println("bruh e");
+                }
+            }
+            // System.out.println("bruh");
+        } else {
             throw new Exception("city not in list");
-//        }
+        }
     }
-
-
 }
