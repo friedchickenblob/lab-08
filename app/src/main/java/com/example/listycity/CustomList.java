@@ -23,6 +23,10 @@ public class CustomList extends ArrayAdapter<City> {
         this.context = context;
     }
 
+    public ArrayList<City> getCities() {
+        return cities;
+    }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -53,6 +57,8 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
+
+
     public boolean hasCity(City city) {
         for (City c : cities) {
             if (c.compareTo(city) == 0) {
@@ -61,4 +67,20 @@ public class CustomList extends ArrayAdapter<City> {
         }
         return false;
     }
+
+    public void delete(City city) throws Exception {
+//        if (hasCity(city)) {
+//            for (City c : cities) {
+//                if (c.compareTo(city) == 0) {
+//                    cities.remove(c);
+//                    System.out.println("bruh e");
+//                }
+//            }
+//            // System.out.println("bruh");
+//        } else {
+            throw new Exception("city not in list");
+//        }
+    }
+
+
 }
