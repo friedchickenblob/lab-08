@@ -81,4 +81,8 @@ public class CustomList extends ArrayAdapter<City> {
             throw new Exception("city not in list");
         }
     }
+
+    public int cityCount() {
+        return 0;
+    }
 }

@@ -61,4 +61,19 @@ public class CustomListTest {
 
         Assertions.assertEquals("city not in list", thrown.getMessage());
     }
+
+    @Test
+    public void testCountCity() {
+        CustomList cityList = mockCityList();
+        City mockCity = mockCity();
+
+        assertEquals(1, cityList.cityCount());
+
+        try {
+            cityList.delete(mockCity);
+        } catch (Exception e) {
+            System.out.println("error: " + e);
+        }
+        assertEquals(0, cityList.cityCount());
+    }
 }
